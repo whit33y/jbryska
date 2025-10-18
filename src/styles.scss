@@ -1,1 +1,38 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+html.dark {
+  background-color: black;
+  color: white;
+}
+
+html.light {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+html.light .logo {
+  color: #222;
+  text-shadow:
+    0 0 5px #b78eff,
+    0 0 10px #b78eff,
+    0 0 20px #b78eff;
+}
+
+html.light .nav a {
+  color: #222;
+}
+
+html.light .nav a:hover {
+  text-shadow:
+    0 0 5px #b78eff,
+    0 0 10px #b78eff,
+    0 0 20px #b78eff;
+}
+
+html.light .hamburger span {
+  background: #222;
+}
