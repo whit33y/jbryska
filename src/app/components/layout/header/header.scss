@@ -1,7 +1,8 @@
 .site-header {
-  position: sticky;
+  position: fixed;
   height: 5dvh;
-  z-index: 100;
+  top: 0;
+  width: 100%;
 }
 
 .logo {
