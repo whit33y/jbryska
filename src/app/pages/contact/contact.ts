@@ -4,8 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-contact',
   imports: [],
   templateUrl: './contact.html',
-  styleUrl: './contact.scss'
+  styleUrl: './contact.scss',
 })
 export class Contact {
-
+  redirectContact(path: string) {
+    window.open(path, '_blank');
+  }
 }
