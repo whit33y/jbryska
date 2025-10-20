@@ -1,3 +1,138 @@
+.home {
+  margin-top: 6dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 7dvh;
+}
+
+.home-image {
+  display: flex;
+  margin-top: 20px;
+}
+
+.home-image h1 {
+  margin-bottom: 0;
+  font-size: 2.5rem;
+}
+
+.home-image p {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
 p {
-  height: 1920px;
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.home-image img {
+  width: 150px;
+  border-radius: 200px;
+}
+
+.experience {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 15px 0px;
+  h4 {
+    margin: 0;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.experience-left {
+  display: flex;
+}
+
+.circle {
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+.sec-square {
+  width: 20px;
+  height: 20px;
+  background-color: #8b5ced;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.home-skills-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.2rem;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+
+.home-skills-icons .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 7px;
+}
+
+:host-context(html.dark) .icon {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+:host-context(html.light) .icon {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.icon:hover {
+  transform: scale(1.05);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    width: 95%;
+  }
+  .home-image h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+  }
+
+  .home-image p {
+    font-size: 0.95rem;
+  }
+
+  .image {
+    display: flex;
+    align-items: center;
+  }
+
+  .experience p {
+    font-size: 0.9rem;
+  }
 }
