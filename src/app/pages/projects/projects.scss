@@ -1,0 +1,140 @@
+.projects {
+  margin-top: 6dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects-container {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 6dvh;
+}
+
+.projects-overview h1 {
+  text-align: start;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+}
+
+img {
+  height: 260px;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  img {
+    padding: 5px;
+  }
+}
+
+img {
+  height: 260px;
+}
+
+.projects-overview p {
+  margin: 0;
+}
+
+.project-element-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 10px 0;
+}
+
+.project-element-images img {
+  height: 260px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.project-technology {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.2rem;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+}
+
+.technology {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95px;
+  height: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 7px;
+}
+
+:host-context(html.dark) .technology {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+:host-context(html.light) .technology {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.project-element-header-links {
+  display: flex;
+  align-items: center;
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 18px;
+    color: #8b5ced;
+    transition: text-shadow 0.3s ease;
+  }
+
+  .status {
+    margin-left: 18px;
+  }
+}
+
+a:hover {
+  text-shadow:
+    0 0 5px #b78eff,
+    0 0 10px #b78eff,
+    0 0 20px #b78eff;
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    width: 95%;
+  }
+  .projects-overview h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 1.8rem;
+  }
+
+  .projects-overview p {
+    font-size: 0.95rem;
+  }
+  .project-element-images img {
+    height: 200px;
+  }
+  .project-element-images {
+    flex-direction: column;
+  }
+}

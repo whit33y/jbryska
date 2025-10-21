@@ -1,1 +1,46 @@
-<p>projects works!</p>
+<main class="projects">
+    <div class="projects-container">
+        <div class="projects-overview">
+            <h1>Portfolio 💻</h1>
+            <p>To moje portfolio projektów wykonanych w wielu różnych technologiach. Niektóre są dalej usprawniane, a
+                część
+                projektów jest zakończonych. Spójrz i wybierz projekt, który Ci interesuje. Jeżeli masz jakieś pytania
+                przejdź do zakładki
+                kontakt.</p>
+        </div>
+        <div class="projects-list">
+            <h2>Projekty</h2>
+            <ul>
+                @for(project of projectArray; track project.name){
+                <li class="project-element">
+                    <div class="project-element-description">
+                        <div class="project-element-header-links">
+                            <h3>{{project.name}}</h3>
+                            <a [href]="project.githubLink" target="_blank">Github</a>
+
+                            @if(project.livePreview){
+                            <a [href]="project.livePreview" target="_blank">Live</a>
+                            }
+                            <p class="status"><b>{{project.status}}</b> @if(project.status === 'Gotowy'){
+                                🏁
+                                }@else{
+                                👨‍💻
+                                }</p>
+                        </div>
+                        <p>{{project.description}}</p>
+                    </div>
+                    <div class="project-element-images">
+                        <img [src]="project.screenshots[0]" alt="" />
+                        <img [src]="project.screenshots[1]" alt="" />
+                    </div>
+                    <div class="project-technology">
+                        @for(technology of project.technologies; track $index){
+                        <div class="technology">{{technology}}</div>
+                        }
+                    </div>
+                </li>
+                }
+            </ul>
+        </div>
+    </div>
+</main>
