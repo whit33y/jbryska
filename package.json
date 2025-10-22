@@ -5,9 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "serve:ssr": "node dist/jbryska/server/server.mjs",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr": "node dist/jbryska/server/server.mjs",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "format": "prettier --write \"src/**/*.{ts,html,scss,css,js,json,md}\""
