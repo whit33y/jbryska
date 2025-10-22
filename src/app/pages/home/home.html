@@ -11,69 +11,35 @@
         </div>
         <div class="home-about">
             <h2>O mnie</h2>
-            <p>Pracuje jako Angular Developer od ponad 1.5roku. W tym czasie napisałem wiele aplikacji komercyjnych dla
-                sektora FMCG (B2B,dystrybucja spożywcza). Aplikacje były ściśle związane z zarządzaniem treściami
-                marketingowymi, usprawnianiem pracy PH oraz sprzedażą B2B. Czerpię ogromną satysfakcję z programowania i
-                ciągle doskonale swoje umiejętności, śledzę nowości oraz poszerzam swoje horyzonty. Mam również 3 letnie
-                doświadczenie jako technik/młodszy specjalista ds. IT. Z ciekawością szukam nowych możliwości do rozwoju
-                i zdobycia doświadczenia. Poza życiem zawodowym jestem zakochany w sporcie wydolnościowym a w
-                szczególności triathlonem.</p>
+            <p>{{description}}</p>
         </div>
         <div class="home-experience">
             <h2>Kariera zawodowa</h2>
+            @for(experience of experienceList; track experience.name){
             <div class="experience">
                 <div class="experience-left">
                     <div class="circle">
-                        <div class="sec-square"></div>
+                        <div class="square"></div>
                     </div>
                     <div>
-                        <h4>Daw-Systems</h4>
-                        <p>Angular Developer</p>
+                        <h4>{{experience.name}}</h4>
+                        <p>{{experience.position}}</p>
                     </div>
                 </div>
                 <div class="experience-right">
-                    <p>05.2024-Obecnie</p>
+                    <p>{{experience.date}}</p>
                 </div>
             </div>
-            <div class="experience">
-                <div class="experience-left">
-                    <div class="circle">
-                        <div class="sec-square"></div>
-                    </div>
-                    <div>
-                        <h4>Altom</h4>
-                        <p>Młodszy spec ds. IT</p>
-                    </div>
-                </div>
-                <div class="experience-right">
-                    <p>06.2021-05.2024</p>
-                </div>
-            </div>
+            }
         </div>
         <div class="home-skills">
             <h2>Stack technologiczny</h2>
             <div class="home-skills-icons">
+                @for(icon of icons; track icon){
                 <div class="icon">
-                    <p>HTML</p>
+                    <p>{{icon}}</p>
                 </div>
-                <div class="icon">
-                    <p>CSS</p>
-                </div>
-                <div class="icon">
-                    <p>JS</p>
-                </div>
-                <div class="icon">
-                    <p>ANGULAR</p>
-                </div>
-                <div class="icon">
-                    <p>TYPESCRIPT</p>
-                </div>
-                <div class="icon">
-                    <p>TAILWIND</p>
-                </div>
-                <div class="icon">
-                    <p>GIT</p>
-                </div>
+                }
             </div>
         </div>
     </div>
