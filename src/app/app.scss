@@ -3,5 +3,15 @@
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
-  height: 88dvh;
+  display: flex;
+  justify-content: center;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 900px;
 }
