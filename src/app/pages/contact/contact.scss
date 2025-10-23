@@ -22,7 +22,7 @@
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-family-body);
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -54,10 +54,10 @@ button {
   border-radius: 15px;
   background: linear-gradient(145deg, #222, #111);
   box-shadow:
-    0 0 10px rgba(139, 92, 237, 0.4),
-    inset 0 0 8px rgba(139, 92, 237, 0.2);
-  border: 2px solid rgba(139, 92, 237, 0.5);
-  font-family: 'Montserrat', sans-serif;
+    0 0 10px var(--color-button-shadow-1),
+    inset 0 0 8px var(--color-button-shadow-2);
+  border: 2px solid var(--color-button-border);
+  font-family: var(--font-family-body);
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 600;
@@ -72,8 +72,10 @@ button {
 
 button:hover {
   cursor: pointer;
-  color: #8b5ced;
-  filter: drop-shadow(0 0 1px #8b5ced) drop-shadow(0 0 5px #8b5ced) drop-shadow(0 0 10px #8b5ced);
+  color: var(--color-accent-primary);
+  filter: drop-shadow(0 0 1px var(--color-accent-primary))
+    drop-shadow(0 0 5px var(--color-accent-primary))
+    drop-shadow(0 0 10px var(--color-accent-primary));
 }
 
 @media (max-width: 768px) {
