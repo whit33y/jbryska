@@ -1,10 +1,10 @@
-import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
 import { Project } from '../../services/project.interface';
+import { ProjectsCard } from '../../components/elements/projects-card/projects-card';
 
 @Component({
   selector: 'app-projects',
-  imports: [NgOptimizedImage],
+  imports: [ProjectsCard],
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })

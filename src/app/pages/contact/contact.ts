@@ -6,8 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact {
-  redirectContact(path: string) {
-    window.open(path, '_blank');
-  }
-}
+export class Contact {}
