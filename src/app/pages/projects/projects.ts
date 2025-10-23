@@ -1,5 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component } from '@angular/core';
+import { Project } from '../../services/project.interface';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrl: './projects.scss',
 })
 export class Projects {
-  projectArray = [
+  projectArray: Project[] = [
     {
       name: 'Maintenance',
       description:
