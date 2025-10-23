@@ -1,9 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { LinkedinIconComponent } from '../../elements/icons/linkedin-icon';
+import { GithubIconComponent } from '../../elements/icons/github-icon';
+import { TwitterIconComponent } from '../../elements/icons/twitter-icon';
+import { MailIconComponent } from '../../elements/icons/mail-icon';
 
 @Component({
   selector: 'app-footer',
-  imports: [CommonModule],
+  imports: [
+    CommonModule,
+    LinkedinIconComponent,
+    GithubIconComponent,
+    TwitterIconComponent,
+    MailIconComponent,
+  ],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })

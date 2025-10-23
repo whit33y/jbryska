@@ -19,7 +19,7 @@
   grid-template-rows: 1fr;
   grid-column-gap: 10px;
   border-radius: 15px;
-  background: linear-gradient(145deg, #222, #111);
+  background-color: var(--color-background-primary);
   box-shadow:
     0 0 10px var(--color-button-shadow-1),
     inset 0 0 8px var(--color-button-shadow-2);

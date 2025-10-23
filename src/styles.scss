@@ -64,3 +64,13 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
+
+.site-footer .container a:hover {
+  color: var(--color-accent-primary);
+}
+
+.site-footer .container a:hover svg {
+  filter: drop-shadow(0 0 2px var(--color-accent-primary))
+    drop-shadow(0 0 10px var(--color-accent-primary))
+    drop-shadow(0 0 20px var(--color-accent-primary));
+}
