@@ -21,7 +21,7 @@
 }
 
 img {
-  height: 260px;
+  height: auto;
 }
 
 p {
@@ -131,9 +131,7 @@ a:hover {
   .projects-overview p {
     font-size: 0.95rem;
   }
-  .project-element-images img {
-    height: 200px;
-  }
+
   .project-element-images {
     flex-direction: column;
   }
