@@ -4,7 +4,7 @@
             <button class="logo" routerLink="/home" (click)="closeMenu()">JBRYSKA</button>
 
             <button class="theme-switch" [class.light]="theme() === 'light'" [class.dark]="theme() === 'dark'"
-                (click)="changeTheme()">
+                (click)="changeTheme()" aria-label="Change theme">
                 <div class="theme-thumb">
                     @if(theme() !== 'dark'){
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
