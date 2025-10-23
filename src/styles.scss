@@ -1,3 +1,46 @@
+:root {
+  --color-text-primary: #222;
+  --color-background-primary: #f5f5f5;
+  --color-link-hover-glow: #b78eff;
+  --color-link-hover-glow-light: #b78eff;
+  --color-accent-primary: #8b5ced;
+  --color-link-active-dark: #8a5ced;
+
+  --color-icon-background: black;
+  --color-icon-text: white;
+  --color-icon-shadow: rgba(0, 0, 0, 0.2);
+  --color-experience-circle: #ccc;
+  --color-experience-square: #8b5ced;
+
+  --color-button-shadow-1: rgba(139, 92, 237, 0.4);
+  --color-button-shadow-2: rgba(139, 92, 237, 0.2);
+  --color-button-border: rgba(139, 92, 237, 0.5);
+
+  --color-header-bg: rgba(245, 245, 245, 0.8);
+  --color-logo-text: #1e1e1e;
+  --color-link-text: #1e1e1e;
+  --color-hamburger: #1e1e1e;
+  --color-neon-glow: #8b5ced;
+
+  --font-family-header: 'Orbitron', sans-serif;
+  --font-family-body: 'Montserrat', sans-serif;
+}
+
+html.dark {
+  --color-text-primary: white;
+  --color-background-primary: black;
+
+  --color-icon-background: white;
+  --color-icon-text: black;
+  --color-icon-shadow: rgba(255, 255, 255, 0.1);
+  --color-experience-circle: #555;
+
+  --color-header-bg: rgba(0, 0, 0, 0.8);
+  --color-logo-text: white;
+  --color-link-text: white;
+  --color-hamburger: white;
+}
+
 html,
 body {
   width: 100dvw;
@@ -8,47 +51,16 @@ body {
   overflow-x: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  // overflow-y: hidden;
 }
 
 body {
+  background-color: var(--color-background-primary);
+  color: var(--color-text-primary);
   overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
 body::-webkit-scrollbar {
   display: none;
-}
-
-html.dark {
-  background-color: black;
-  color: white;
-}
-
-html.light {
-  background-color: #f5f5f5;
-  color: #222;
-}
-
-html.light .logo {
-  color: #222;
-  text-shadow:
-    0 0 5px #b78eff,
-    0 0 10px #b78eff,
-    0 0 20px #b78eff;
-}
-
-html.light .nav a {
-  color: #222;
-}
-
-html.light .nav a:hover {
-  text-shadow:
-    0 0 5px #b78eff,
-    0 0 10px #b78eff,
-    0 0 20px #b78eff;
-}
-
-html.light .hamburger span {
-  background: #222;
 }

@@ -25,7 +25,7 @@ img {
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-family-body);
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -80,18 +80,9 @@ img {
   font-size: 0.8rem;
   font-weight: 500;
   border-radius: 7px;
-}
-
-:host-context(html.dark) .technology {
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
-}
-
-:host-context(html.light) .technology {
-  background-color: black;
-  color: white;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+  background-color: var(--color-icon-background);
+  color: var(--color-icon-text);
+  box-shadow: 0 0 6px var(--color-icon-shadow);
 }
 
 .project-element-header-links {
@@ -102,7 +93,7 @@ img {
     align-items: center;
     text-decoration: none;
     margin-left: 18px;
-    color: #8b5ced;
+    color: var(--color-accent-primary);
     transition: text-shadow 0.3s ease;
   }
 
@@ -113,9 +104,9 @@ img {
 
 a:hover {
   text-shadow:
-    0 0 5px #b78eff,
-    0 0 10px #b78eff,
-    0 0 20px #b78eff;
+    0 0 5px var(--color-link-hover-glow),
+    0 0 10px var(--color-link-hover-glow),
+    0 0 20px var(--color-link-hover-glow);
 }
 
 @media (max-width: 768px) {

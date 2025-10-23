@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem('theme');
+        const html = document.documentElement;
+        const theme = saved ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        html.classList.add(theme);
+      } catch (e) { }
+    })();
+  </script>
   <meta charset="utf-8" />
   <title>jbryska</title>
   <base href="/" />
@@ -14,16 +24,6 @@
     href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
     rel="stylesheet">
   <!-- font -->
-  <script>
-    (function () {
-      try {
-        const saved = localStorage.getItem('theme');
-        const html = document.documentElement;
-        const theme = saved ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        html.classList.add(theme);
-      } catch (e) { }
-    })();
-  </script>
 </head>
 
 <body>

@@ -30,7 +30,7 @@
 }
 
 p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--font-family-body);
   font-optical-sizing: auto;
   font-style: normal;
 }
@@ -60,20 +60,20 @@ p {
 .circle {
   width: 40px;
   height: 40px;
-  background-color: #ccc;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 5px;
+  background-color: var(--color-experience-circle);
 }
 
 .square {
   width: 20px;
   height: 20px;
-  background-color: #8b5ced;
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
+  background-color: var(--color-experience-square);
 }
 
 .home-skills-icons {
@@ -94,19 +94,11 @@ p {
   font-size: 0.8rem;
   font-weight: 500;
   border-radius: 7px;
+  background-color: var(--color-icon-background);
+  color: var(--color-icon-text);
+  box-shadow: 0 0 6px var(--color-icon-shadow);
 }
 
-:host-context(html.dark) .icon {
-  background-color: white;
-  color: black;
-  box-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
-}
-
-:host-context(html.light) .icon {
-  background-color: black;
-  color: white;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
-}
 .icon:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease;

@@ -21,10 +21,10 @@
   border-radius: 15px;
   background: linear-gradient(145deg, #222, #111);
   box-shadow:
-    0 0 10px rgba(139, 92, 237, 0.4),
-    inset 0 0 8px rgba(139, 92, 237, 0.2);
-  border: 2px solid rgba(139, 92, 237, 0.5);
-  font-family: 'Orbitron', sans-serif;
+    0 0 10px var(--color-button-shadow-1),
+    inset 0 0 8px var(--color-button-shadow-2);
+  border: 2px solid var(--color-button-border);
+  font-family: var(--font-family-header);
   font-weight: 600;
   transition:
     transform 0.1s ease,
@@ -44,9 +44,11 @@
 }
 
 .site-footer .container a:hover {
-  color: #8b5ced;
+  color: var(--color-accent-primary);
 }
 
 .site-footer .container a:hover svg {
-  filter: drop-shadow(0 0 2px #8b5ced) drop-shadow(0 0 10px #8b5ced) drop-shadow(0 0 20px #8b5ced);
+  filter: drop-shadow(0 0 2px var(--color-accent-primary))
+    drop-shadow(0 0 10px var(--color-accent-primary))
+    drop-shadow(0 0 20px var(--color-accent-primary));
 }
