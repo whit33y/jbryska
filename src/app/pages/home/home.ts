@@ -1,5 +1,6 @@
 import { NgOptimizedImage } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +8,26 @@ import { Component } from '@angular/core';
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
-export class Home {
+export class Home implements OnInit {
+  private meta = inject(Meta);
+  private title = inject(Title);
+
+  ngOnInit() {
+    this.title.setTitle('Portfolio - Jakub Bryska');
+    this.meta.updateTag({
+      name: 'description',
+      content: 'Front-end developer z pasją do Angulara i nowoczesnych technologii.',
+    });
+    this.meta.updateTag({
+      property: 'og:title',
+      content: 'Portfolio - Jakub Bryska',
+    });
+    this.meta.updateTag({
+      property: 'og:description',
+      content: 'Zobacz moje projekty, doświadczenie i skontaktuj się ze mną.',
+    });
+  }
+
   experienceList = [
     {
       name: 'Daw-Systems',

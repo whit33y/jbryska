@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { Project } from '../../services/project.interface';
 import { ProjectsCard } from '../../components/elements/projects-card/projects-card';
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +9,17 @@ import { ProjectsCard } from '../../components/elements/projects-card/projects-c
   templateUrl: './projects.html',
   styleUrl: './projects.scss',
 })
-export class Projects {
+export class Projects implements OnInit {
+  private meta = inject(Meta);
+  private title = inject(Title);
+
+  ngOnInit() {
+    this.title.setTitle('Projekty - Jakub Bryska');
+    this.meta.updateTag({
+      name: 'description',
+      content: 'Zbiór moich projektów front-endowych i full-stackowych.',
+    });
+  }
   projectArray: Project[] = [
     {
       name: 'Maintenance',
