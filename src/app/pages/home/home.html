@@ -1,4 +1,4 @@
-<div class="home-image">
+<section class="home-image">
     <div>
         <h1>Witaj na mojej stronie! 👋</h1>
         <p>Jestem Jakub i jestem Front-end developerem specjalizującym się we frameworku Angular.</p>
@@ -6,12 +6,12 @@
     <div class="image">
         <img ngSrc="/jbryska.webp" alt="Mój portret" width="150" height="150" />
     </div>
-</div>
-<div class="home-about">
+</section>
+<section class="home-about">
     <h2>O mnie</h2>
     <p>{{description}}</p>
-</div>
-<div class="home-experience">
+</section>
+<section class="home-experience">
     <h2>Kariera zawodowa</h2>
     @for(experience of experienceList; track experience.name){
     <div class="experience">
@@ -29,8 +29,8 @@
         </div>
     </div>
     }
-</div>
-<div class="home-skills">
+</section>
+<section class="home-skills">
     <h2>Stack technologiczny</h2>
     <div class="home-skills-icons">
         @for(icon of icons; track icon){
@@ -39,4 +39,4 @@
         </div>
         }
     </div>
-</div>
+</section>

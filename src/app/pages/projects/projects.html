@@ -1,16 +1,16 @@
-<div class="projects-overview">
+<section class="projects-overview">
     <h1>Portfolio 💻</h1>
     <p>To moje portfolio projektów wykonanych w wielu różnych technologiach. Niektóre są dalej usprawniane, a
         część
         projektów jest zakończonych. Spójrz i wybierz projekt, który Ci interesuje. Jeżeli masz jakieś pytania
         przejdź do zakładki
         kontakt.</p>
-</div>
-<div class="projects-list">
+</section>
+<section class="projects-list">
     <h2>Projekty</h2>
     <div class="list">
         @for(project of projectArray; track $index){
         <app-projects-card [project]="project" [index]="$index" />
         }
     </div>
-</div>
+</section>
