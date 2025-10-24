@@ -1,54 +1,93 @@
 <header class="site-header">
-    <div class="container">
-        <div class="logo-container">
-            <button class="logo" routerLink="/home" (click)="closeMenu()">JBRYSKA</button>
+  <div class="container">
+    <div class="logo-container">
+      <button class="logo" routerLink="/home" (click)="closeMenu()">JBRYSKA</button>
 
-            <button class="theme-switch" [class.light]="theme() === 'light'" [class.dark]="theme() === 'dark'"
-                (click)="changeTheme()" aria-label="Zmień motyw">
-                <div class="theme-thumb">
-                    @if(theme() !== 'dark'){
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-sunset-2">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M3 13h1" />
-                        <path d="M20 13h1" />
-                        <path d="M5.6 6.6l.7 .7" />
-                        <path d="M18.4 6.6l-.7 .7" />
-                        <path d="M8 13a4 4 0 1 1 8 0" />
-                        <path d="M3 17h18" />
-                        <path d="M7 20h5" />
-                        <path d="M16 20h1" />
-                        <path d="M12 5v-1" />
-                    </svg>
-                    }@else{
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="icon icon-tabler icons-tabler-outline icon-tabler-haze-moon">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M3 16h18" />
-                        <path d="M3 20h18" />
-                        <path
-                            d="M8.296 16c-2.268 -1.4 -3.598 -4.087 -3.237 -6.916c.443 -3.48 3.308 -6.083 6.698 -6.084v.006h.296c-1.991 1.916 -2.377 5.03 -.918 7.405c1.459 2.374 4.346 3.33 6.865 2.275a6.888 6.888 0 0 1 -2.777 3.314" />
-                    </svg>
-                    }
-                </div>
-            </button>
+      <button
+        class="theme-switch"
+        [class.light]="theme() === 'light'"
+        [class.dark]="theme() === 'dark'"
+        (click)="changeTheme()"
+        aria-label="Zmień motyw"
+      >
+        <div class="theme-thumb">
+          @if(theme() !== 'dark'){
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-sunset-2"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 13h1" />
+            <path d="M20 13h1" />
+            <path d="M5.6 6.6l.7 .7" />
+            <path d="M18.4 6.6l-.7 .7" />
+            <path d="M8 13a4 4 0 1 1 8 0" />
+            <path d="M3 17h18" />
+            <path d="M7 20h5" />
+            <path d="M16 20h1" />
+            <path d="M12 5v-1" />
+          </svg>
+          }@else{
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-haze-moon"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M3 16h18" />
+            <path d="M3 20h18" />
+            <path
+              d="M8.296 16c-2.268 -1.4 -3.598 -4.087 -3.237 -6.916c.443 -3.48 3.308 -6.083 6.698 -6.084v.006h.296c-1.991 1.916 -2.377 5.03 -.918 7.405c1.459 2.374 4.346 3.33 6.865 2.275a6.888 6.888 0 0 1 -2.777 3.314"
+            />
+          </svg>
+          }
         </div>
-
-        <button class="hamburger" (click)="toggleMenu()" aria-label="Otwórz nawigacje">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-
-        <nav class="nav" [class.open]="menuOpen">
-            <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                (click)="closeMenu()">O mnie</a>
-            <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                (click)="closeMenu()">Projekty</a>
-            <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-                (click)="closeMenu()">Kontakt</a>
-        </nav>
+      </button>
     </div>
+
+    <button class="hamburger" (click)="toggleMenu()" aria-label="Otwórz nawigacje">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav" [class.open]="menuOpen">
+      <a
+        routerLink="/home"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >O mnie</a
+      >
+      <a
+        routerLink="/projects"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >Projekty</a
+      >
+      <a
+        routerLink="/contact"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >Kontakt</a
+      >
+    </nav>
+  </div>
 </header>

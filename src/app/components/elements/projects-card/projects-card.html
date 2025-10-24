@@ -1,35 +1,49 @@
 @if(project){
 <div class="project-element">
-    <div class="project-element-description">
-        <div class="project-element-header-links">
-            <h3>{{project.name}} @if(project.status === 'Gotowy'){
-                🏁
-                }@else{
-                👨‍💻
-                }</h3>
-            <a [href]="project.githubLink" target="_blank">Github</a>
-            @if(project.livePreview){
-            <a [href]="project.livePreview" target="_blank">Live</a>
-            }
-        </div>
-        <p>{{project.description}}</p>
+  <div class="project-element-description">
+    <div class="project-element-header-links">
+      <h3>{{project.name}} @if(project.status === 'Gotowy'){ 🏁 }@else{ 👨‍💻 }</h3>
+      <a [href]="project.githubLink" target="_blank">Github</a>
+      @if(project.livePreview){
+      <a [href]="project.livePreview" target="_blank">Live</a>
+      }
     </div>
-    <div class="project-element-images">
-        @if (index === 0) {
-        <img [ngSrc]="project.screenshots[0]" [alt]="'Pierwszy zrzut ekranu projektu ' + project.name"
-            class="screenshot" width="416" height="260" sizes="(max-width: 768px) 100vw, 33vw" priority />
-        } @else {
-        <img [ngSrc]="project.screenshots[0]" [alt]="'Pierwszy zrzut ekranu projektu ' + project.name"
-            class="screenshot" width="416" height="260" sizes="(max-width: 768px) 100vw, 33vw" />
-        }
-        <img [ngSrc]="project.screenshots[1]" [alt]="'Drugi zrzut ekranu projektu' + project.name" class="screenshot"
-            width="416" height="260" sizes="(max-width: 768px) 100vw, 33vw" />
-
-    </div>
-    <div class="project-technology">
-        @for(technology of project.technologies; track $index){
-        <div class="technology">{{technology}}</div>
-        }
-    </div>
+    <p>{{project.description}}</p>
+  </div>
+  <div class="project-element-images">
+    @if (index === 0) {
+    <img
+      [ngSrc]="project.screenshots[0]"
+      [alt]="'Pierwszy zrzut ekranu projektu ' + project.name"
+      class="screenshot"
+      width="416"
+      height="260"
+      sizes="(max-width: 768px) 100vw, 33vw"
+      priority
+    />
+    } @else {
+    <img
+      [ngSrc]="project.screenshots[0]"
+      [alt]="'Pierwszy zrzut ekranu projektu ' + project.name"
+      class="screenshot"
+      width="416"
+      height="260"
+      sizes="(max-width: 768px) 100vw, 33vw"
+    />
+    }
+    <img
+      [ngSrc]="project.screenshots[1]"
+      [alt]="'Drugi zrzut ekranu projektu' + project.name"
+      class="screenshot"
+      width="416"
+      height="260"
+      sizes="(max-width: 768px) 100vw, 33vw"
+    />
+  </div>
+  <div class="project-technology">
+    @for(technology of project.technologies; track $index){
+    <div class="technology">{{technology}}</div>
+    }
+  </div>
 </div>
 }

@@ -1,16 +1,16 @@
 <section class="projects-overview">
-    <h1>Portfolio 💻</h1>
-    <p>To moje portfolio projektów wykonanych w wielu różnych technologiach. Niektóre są dalej usprawniane, a
-        część
-        projektów jest zakończonych. Spójrz i wybierz projekt, który Ci interesuje. Jeżeli masz jakieś pytania
-        przejdź do zakładki
-        kontakt.</p>
+  <h1>Portfolio 💻</h1>
+  <p>
+    To moje portfolio projektów wykonanych w różnych technologiach. Niektóre są dalej
+    usprawniane, a część projektów jest zakończonych. Spójrz i wybierz projekt, który Cie interesuje.
+    Jeżeli masz jakieś pytania przejdź do zakładki kontakt. Ps. nie wszystkie projekty są tu uwzględnione 🤓
+  </p>
 </section>
 <section class="projects-list">
-    <h2>Projekty</h2>
-    <div class="list">
-        @for(project of projectArray; track $index){
-        <app-projects-card [project]="project" [index]="$index" />
-        }
-    </div>
+  <h2>Projekty</h2>
+  <div class="list">
+    @for(project of projectArray; track $index){
+    <app-projects-card [project]="project" [index]="$index" />
+    }
+  </div>
 </section>

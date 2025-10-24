@@ -1,17 +1,36 @@
 <footer class="site-footer" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
-    <div class="container" [ngStyle]="{'transform': transformStyle}">
-        <a href="https://github.com/whit33y" target="_blank" rel="noopener noreferrer" aria-label="Profil Github">
-            <app-github-icon [size]="24" />
-        </a>
-        <a href="https://www.linkedin.com/in/jakub-bryska-b905b0279" target="_blank" rel="noopener noreferrer"
-            aria-label="Profil Linkedin">
-            <app-linkedin-icon [size]="24" />
-        </a>
-        <a href="mailto:jakubbryska2@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Profil mailowy">
-            <app-mail-icon [size]="24" />
-        </a>
-        <a href="https://x.com/kubussbr" target="_blank" rel="noopener noreferrer" aria-label="Profil twitter">
-            <app-twitter-icon [size]="24" />
-        </a>
-    </div>
+  <div class="container" [ngStyle]="{'transform': transformStyle}">
+    <a
+      href="https://github.com/whit33y"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Profil Github"
+    >
+      <app-github-icon [size]="24" />
+    </a>
+    <a
+      href="https://www.linkedin.com/in/jakub-bryska-b905b0279"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Profil Linkedin"
+    >
+      <app-linkedin-icon [size]="24" />
+    </a>
+    <a
+      href="mailto:jakubbryska2@gmail.com"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Profil mailowy"
+    >
+      <app-mail-icon [size]="24" />
+    </a>
+    <a
+      href="https://x.com/kubussbr"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Profil twitter"
+    >
+      <app-twitter-icon [size]="24" />
+    </a>
+  </div>
 </footer>

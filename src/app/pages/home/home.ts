@@ -42,7 +42,7 @@ export class Home implements OnInit {
   ];
 
   description =
-    'Pracuje jako Angular Developer od ponad 1.5roku. W tym czasie napisałem wiele aplikacji komercyjnych dla sektora FMCG (B2B,dystrybucja spożywcza). Aplikacje były ściśle związane z zarządzaniem treściami marketingowymi, usprawnianiem pracy PH oraz sprzedażą B2B. Czerpię ogromną satysfakcję z programowania i ciągle doskonale swoje umiejętności, śledzę nowości oraz poszerzam swoje horyzonty. Mam również 3 letnie doświadczenie jako technik/młodszy specjalista ds. IT. Z ciekawością szukam nowych możliwości do rozwoju i zdobycia doświadczenia. Poza życiem zawodowym jestem zakochany w sporcie wydolnościowym a w szczególności triathlonie.';
+    'Pracuję jako Angular Developer od ponad półtora roku. W tym czasie tworzyłem liczne aplikacje komercyjne dla sektora FMCG (B2B, dystrybucja spożywcza) oraz branży fryzjerskiej. Projekty te były ściśle związane z zarządzaniem treściami marketingowymi, usprawnianiem pracy przedstawicieli handlowych oraz sprzedażą B2B. Czerpię ogromną satysfakcję z programowania – stale doskonalę swoje umiejętności, śledzę nowości technologiczne i poszerzam horyzonty. Posiadam również trzyletnie doświadczenie jako technik i młodszy specjalista ds. IT. Z ciekawością poszukuję nowych możliwości rozwoju i zdobywania doświadczenia. Poza życiem zawodowym jestem pasjonatem sportów wytrzymałościowych, w szczególności triathlonu.';
 
   icons = ['HTML', 'CSS', 'JS', 'ANGULAR', 'TYPESCRIPT', 'TAILWIND', 'GIT'];
 }
