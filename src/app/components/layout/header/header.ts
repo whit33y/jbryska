@@ -1,11 +1,13 @@
 import { Component, ElementRef, HostListener, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ThemeService } from '../../../services/theme-service';
+import { SunIconComponent } from '../../elements/icons/sun-icon';
+import { MoonIconComponent } from '../../elements/icons/moon-icon';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, MoonIconComponent, SunIconComponent],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
