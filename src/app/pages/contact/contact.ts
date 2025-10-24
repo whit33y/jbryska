@@ -1,12 +1,10 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { GithubIconComponent } from '../../components/elements/icons/github-icon';
-import { LinkedinIconComponent } from '../../components/elements/icons/linkedin-icon';
-import { MailIconComponent } from '../../components/elements/icons/mail-icon';
 import { Meta, Title } from '@angular/platform-browser';
+import { ContactCard } from '../../components/elements/contact-card/contact-card';
 
 @Component({
   selector: 'app-contact',
-  imports: [GithubIconComponent, LinkedinIconComponent, MailIconComponent],
+  imports: [ContactCard],
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })

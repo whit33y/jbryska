@@ -16,58 +16,11 @@ p {
   grid-template-rows: 1fr;
 }
 
-.channel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-
 .contact-welcome {
   p {
     margin: 0;
     font-size: 1.2rem;
   }
-}
-
-.channel-name {
-  font-weight: bold;
-  margin: 0;
-}
-
-a {
-  text-decoration: none;
-  border-radius: 15px;
-  background: linear-gradient(145deg, #222, #111);
-  box-shadow:
-    0 0 10px var(--color-button-shadow-1),
-    inset 0 0 8px var(--color-button-shadow-2);
-  border: 2px solid var(--color-button-border);
-  font-family: var(--font-family-body);
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 600;
-  color: white;
-  padding: 10px;
-  font-size: 0.95rem;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.3s ease,
-    box-shadow 0.3s ease;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-a:hover {
-  cursor: pointer;
-  color: var(--color-accent-primary);
-  filter: drop-shadow(0 0 1px var(--color-accent-primary))
-    drop-shadow(0 0 5px var(--color-accent-primary))
-    drop-shadow(0 0 10px var(--color-accent-primary));
 }
 
 @media (max-width: 768px) {

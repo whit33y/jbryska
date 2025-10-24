@@ -6,29 +6,7 @@
 </section>
 <h2>Kanały</h2>
 <section class="contact-channels">
-    <div class="channel">
-        <div class="channel-icon">
-            <app-github-icon [size]="60" color="var(--color-text-primary)" />
-        </div>
-        <p class="channel-name">Github</p>
-        <p>whit33y</p>
-        <a href='https://github.com/whit33y' target="_blank" rel="noopener noreferrer">Przejdź do Githuba</a>
-    </div>
-    <div class="channel">
-        <div class="channel-icon">
-            <app-linkedin-icon [size]="60" color="var(--color-text-primary)" />
-        </div>
-        <p class="channel-name">Linkedin</p>
-        <p>Jakub Bryska</p>
-        <a href='https://www.linkedin.com/in/jakub-bryska-b905b0279' target="_blank" rel="noopener noreferrer">Przejdź
-            do Linkedina</a>
-    </div>
-    <div class="channel">
-        <div class="channel-icon">
-            <app-mail-icon [size]="60" color="var(--color-text-primary)" />
-        </div>
-        <p class="channel-name">Email</p>
-        <p>jakubbryska2@gmail.com</p>
-        <a href='mailto:jakubbryska2@gmail.com' target="_blank" rel="noopener noreferrer">Przejdź do maila</a>
-    </div>
+    <app-contact-card type="Github" name="whit33y" link="https://github.com/whit33y" />
+    <app-contact-card type="Linkedin" name="Jakub Bryska" link="https://www.linkedin.com/in/jakub-bryska-b905b0279" />
+    <app-contact-card type="Mail" name="jakubbryska2@gmail.com" link="mailto:jakubbryska2@gmail.com" />
 </section>
