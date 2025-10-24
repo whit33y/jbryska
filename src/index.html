@@ -6,9 +6,9 @@
     (function () {
       try {
         const saved = localStorage.getItem('theme');
-        const html = document.documentElement;
-        const theme = saved ? saved : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        html.classList.add(theme);
+        const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+        document.documentElement.classList.add(theme);
       } catch (e) { }
     })();
   </script>

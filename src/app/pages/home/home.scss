@@ -29,7 +29,9 @@ p {
   align-items: center;
   justify-content: space-between;
   margin: 15px 0px;
-  h4 {
+  .exp-name {
+    font-weight: bold;
+    font-size: 1.05rem;
     margin: 0;
   }
   p {

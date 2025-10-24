@@ -3,8 +3,8 @@
   --color-background-primary: #f5f5f5;
   --color-link-hover-glow: #b78eff;
   --color-link-hover-glow-light: #b78eff;
-  --color-accent-primary: #8b5ced;
-  --color-link-active-dark: #8a5ced;
+  --color-accent-primary: #6a2de2;
+  --color-link-active-dark: #5b20cc;
 
   --color-icon-background: black;
   --color-icon-text: white;
@@ -29,6 +29,8 @@
 html.dark {
   --color-text-primary: white;
   --color-background-primary: black;
+  --color-accent-primary: #8b5ced;
+  --color-link-active-dark: #8a5ced;
 
   --color-icon-background: white;
   --color-icon-text: black;

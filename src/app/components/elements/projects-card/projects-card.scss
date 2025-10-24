@@ -5,8 +5,8 @@ p {
   margin: 0;
 }
 
-li {
-  border: 2px solid var(--color-link-hover-glow);
+.project-element {
+  border: 2px solid var(--color-accent-primary);
   padding: 10px;
   border-radius: 15px;
   margin-bottom: 10px;

@@ -8,9 +8,9 @@
 </div>
 <div class="projects-list">
     <h2>Projekty</h2>
-    <ul>
+    <div class="list">
         @for(project of projectArray; track $index){
         <app-projects-card [project]="project" [index]="$index" />
         }
-    </ul>
+    </div>
 </div>
