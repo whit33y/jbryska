@@ -14,20 +14,7 @@
 <section class="home-experience">
   <h2>Kariera zawodowa</h2>
   @for(experience of experienceList; track experience.name){
-  <div class="experience">
-    <div class="experience-left">
-      <div class="circle">
-        <div class="square"></div>
-      </div>
-      <div>
-        <p class="exp-name">{{experience.name}}</p>
-        <p>{{experience.position}}</p>
-      </div>
-    </div>
-    <div class="experience-right">
-      <p>{{experience.date}}</p>
-    </div>
-  </div>
+  <app-experience-card [companyName]="experience.name" [position]="experience.position" [date]="experience.date" />
   }
 </section>
 <section class="home-skills">

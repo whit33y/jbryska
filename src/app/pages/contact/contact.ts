@@ -19,4 +19,22 @@ export class Contact implements OnInit {
       content: 'Skontaktuj się ze mną przez jeden z wybranych przez Ciebie kanałów.',
     });
   }
+
+  contactChannels = [
+    {
+      type: 'Github',
+      name: 'whit33y',
+      link: 'https://github.com/whit33y',
+    },
+    {
+      type: 'Linkedin',
+      name: 'Jakub Bryska',
+      link: 'https://www.linkedin.com/in/jakub-bryska-b905b0279',
+    },
+    {
+      type: 'Mail',
+      name: 'jakubbryska2@gmail.com',
+      link: 'mailto:jakubbryska2@gmail.com',
+    },
+  ];
 }

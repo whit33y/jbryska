@@ -1,10 +1,11 @@
 import { NgOptimizedImage } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
+import { ExperienceCard } from '../../components/elements/experience-card/experience-card';
 
 @Component({
   selector: 'app-home',
-  imports: [NgOptimizedImage],
+  imports: [NgOptimizedImage, ExperienceCard],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })

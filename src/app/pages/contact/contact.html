@@ -7,15 +7,7 @@
 </section>
 <h2>Kanały</h2>
 <section class="contact-channels">
-  <app-contact-card type="Github" name="whit33y" link="https://github.com/whit33y" />
-  <app-contact-card
-    type="Linkedin"
-    name="Jakub Bryska"
-    link="https://www.linkedin.com/in/jakub-bryska-b905b0279"
-  />
-  <app-contact-card
-    type="Mail"
-    name="jakubbryska2@gmail.com"
-    link="mailto:jakubbryska2@gmail.com"
-  />
+  @for(contact of contactChannels; track $index){
+  <app-contact-card [type]="contact.type" [name]="contact.name" [link]="contact.link" />
+  }
 </section>

@@ -24,44 +24,6 @@ p {
   border-radius: 200px;
 }
 
-.experience {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 15px 0px;
-  .exp-name {
-    font-weight: bold;
-    font-size: 1.05rem;
-    margin: 0;
-  }
-  p {
-    margin: 0;
-  }
-}
-
-.experience-left {
-  display: flex;
-}
-
-.circle {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 5px;
-  background-color: var(--color-experience-circle);
-}
-
-.square {
-  width: 20px;
-  height: 20px;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  background-color: var(--color-experience-square);
-}
-
 .home-skills-icons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
