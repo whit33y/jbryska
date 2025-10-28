@@ -3,8 +3,11 @@
   height: 50px;
   top: 0;
   width: 100%;
+  font-family: var(--font-family-header);
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
 }
-
 .container {
   display: flex;
   justify-content: space-between;
@@ -12,26 +15,18 @@
   max-width: 900px;
   align-items: center;
   margin: 0 auto;
-  font-family: var(--font-family-header);
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 600;
 }
-
 .logo {
   border: none;
   background-color: transparent;
+  font-family: var(--font-family-header);
+  font-weight: 600;
   font-size: 1.5rem;
   color: var(--color-logo-text);
-  font-family: var(--font-family-header);
-  font-optical-sizing: auto;
-  font-style: normal;
-  font-weight: 600;
   transition:
     transform 0.2s ease-in-out,
     color 0.3s ease,
     text-shadow 0.3s ease;
-
   text-shadow:
     0 0 5px var(--color-neon-glow),
     0 0 10px var(--color-neon-glow),
@@ -40,29 +35,25 @@
     0 0 80px var(--color-neon-glow);
   animation: flicker 3s infinite;
 }
-
 html.light .logo {
   text-shadow:
     0 0 5px var(--color-link-hover-glow-light),
     0 0 10px var(--color-link-hover-glow-light),
     0 0 20px var(--color-link-hover-glow-light);
-  animation: none;
 }
 html.light .site-header {
   background-color: var(--color-background-primary);
 }
-
 .logo-container {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
 .theme-switch {
   position: relative;
   width: 56px;
   height: 28px;
-  border-radius: 9999px;
+  border-radius: 99px;
   cursor: pointer;
   margin-left: 14px;
   transition:
@@ -76,7 +67,6 @@ html.light .site-header {
   background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(0, 0, 0, 0.1));
   backdrop-filter: blur(6px);
 }
-
 .theme-thumb {
   position: absolute;
   top: 2px;
@@ -95,14 +85,12 @@ html.light .site-header {
     box-shadow 0.3s ease,
     color 0.3s ease;
 }
-
 .theme-switch.light {
   background: linear-gradient(145deg, #e0e0e0, #f5f5f5);
   box-shadow:
     inset 1px 1px 4px rgba(0, 0, 0, 0.1),
     0 0 8px rgba(0, 0, 0, 0.05);
 }
-
 .theme-switch.light .theme-thumb {
   transform: translateX(28px);
   background-color: rgba(0, 0, 0, 0.7);
@@ -111,14 +99,12 @@ html.light .site-header {
     0 0 6px rgba(255, 217, 59, 0.5),
     inset 0 0 3px rgba(255, 255, 255, 0.4);
 }
-
 .theme-switch.dark {
   background: linear-gradient(145deg, #222, #111);
   box-shadow:
     0 0 10px rgba(139, 92, 237, 0.4),
     inset 0 0 8px rgba(139, 92, 237, 0.2);
 }
-
 .theme-switch.dark .theme-thumb {
   transform: translateX(0);
   background: rgba(255, 255, 255, 0.7);
@@ -127,7 +113,6 @@ html.light .site-header {
     0 0 10px rgba(139, 92, 237, 0.5),
     inset 0 0 3px rgba(255, 255, 255, 0.4);
 }
-
 .nav {
   display: grid;
   justify-items: center;
@@ -135,15 +120,11 @@ html.light .site-header {
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 10px;
 }
-
 a {
   color: var(--color-link-text);
   text-decoration: none;
-  transition:
-    color 0.3s ease,
-    text-shadow 0.3s ease;
+  transition: text-shadow 0.3s ease;
 }
-
 a:hover {
   text-shadow:
     0 0 5px var(--color-neon-glow),
@@ -152,18 +133,15 @@ a:hover {
     0 0 40px var(--color-neon-glow),
     0 0 80px var(--color-neon-glow);
 }
-
 html.light a:hover {
   text-shadow:
     0 0 5px var(--color-link-hover-glow-light),
     0 0 10px var(--color-link-hover-glow-light),
     0 0 20px var(--color-link-hover-glow-light);
 }
-
 .nav .active {
   color: var(--color-link-active-dark);
 }
-
 .hamburger {
   display: none;
   flex-direction: column;
@@ -175,7 +153,6 @@ html.light a:hover {
   cursor: pointer;
   z-index: 200;
 }
-
 span {
   display: block;
   height: 4px;
@@ -184,12 +161,10 @@ span {
   transition: all 0.3s ease;
   background: var(--color-hamburger);
 }
-
 .nav.open ~ .hamburger span:nth-child(1),
 .hamburger.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
-
 .nav.open ~ .hamburger span:nth-child(2),
 .hamburger.active span:nth-child(2) {
   opacity: 0;
@@ -199,12 +174,10 @@ span {
 .hamburger.active span:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
-
 @media (max-width: 768px) {
   .hamburger {
     display: flex;
   }
-
   .nav {
     position: absolute;
     top: 0;
@@ -222,18 +195,15 @@ span {
       opacity 0.3s ease;
     opacity: 0;
   }
-
   .nav.open {
     transform: translateY(0);
     opacity: 1;
   }
-
   .nav a {
     font-size: 1.1rem;
     color: white;
   }
 }
-
 @keyframes flicker {
   0%,
   19%,

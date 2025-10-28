@@ -40,7 +40,7 @@ export class Header {
 
   headerLinks = [
     {
-      link: '/home',
+      link: '',
       name: 'O mnie',
     },
     {
