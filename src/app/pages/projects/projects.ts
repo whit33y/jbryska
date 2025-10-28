@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Project } from '../../services/project.interface';
 import { ProjectsCard } from '../../components/elements/projects-card/projects-card';
-import { Meta, Title } from '@angular/platform-browser';
+import { MetaService } from '../../services/meta-service';
 
 @Component({
   selector: 'app-projects',
@@ -10,15 +10,13 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrl: './projects.scss',
 })
 export class Projects implements OnInit {
-  private meta = inject(Meta);
-  private title = inject(Title);
+  private metaService = inject(MetaService);
 
   ngOnInit() {
-    this.title.setTitle('Projekty - Jakub Bryska');
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Zbiór moich projektów front-endowych i full-stackowych.',
-    });
+    this.metaService.updateMeta(
+      'Projekty - Jakub Bryska',
+      'Portfolio projektów webowych. Zobacz szczegółowe opisy moich projektów front-endowych/back-endowych i znajdź linki do repozytoriów.'
+    );
   }
   projectArray: Project[] = [
     {

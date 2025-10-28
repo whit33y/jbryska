@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
 import { ContactCard } from '../../components/elements/contact-card/contact-card';
+import { MetaService } from '../../services/meta-service';
 
 @Component({
   selector: 'app-contact',
@@ -9,15 +9,13 @@ import { ContactCard } from '../../components/elements/contact-card/contact-card
   styleUrl: './contact.scss',
 })
 export class Contact implements OnInit {
-  private meta = inject(Meta);
-  private title = inject(Title);
+  private metaService = inject(MetaService);
 
   ngOnInit() {
-    this.title.setTitle('Kontakt - Jakub Bryska');
-    this.meta.updateTag({
-      name: 'description',
-      content: 'Skontaktuj się ze mną przez jeden z wybranych przez Ciebie kanałów.',
-    });
+    this.metaService.updateMeta(
+      'Kontakt - Jakub Bryska',
+      'Skontaktuj się ze mną przez jeden z wybranych przez Ciebie kanałów: Email, Linkedin, Github.'
+    );
   }
 
   contactChannels = [
