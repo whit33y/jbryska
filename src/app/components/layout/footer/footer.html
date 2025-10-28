@@ -1,36 +1,17 @@
 <footer class="site-footer" (mousemove)="onMouseMove($event)" (mouseleave)="onMouseLeave()">
   <div class="container" [ngStyle]="{'transform': transformStyle}">
-    <a
-      href="https://github.com/whit33y"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Profil Github"
-    >
+    @for(links of footerLinks; track links.name){
+    <a [href]="links.link" target="_blank" rel="noopener noreferrer" [aria-label]="links.ariaLabel">
+      @switch (links.name) { @case('github'){
       <app-github-icon [size]="24" />
-    </a>
-    <a
-      href="https://www.linkedin.com/in/jakub-bryska-b905b0279"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Profil Linkedin"
-    >
+      } @case('linkedin'){
       <app-linkedin-icon [size]="24" />
-    </a>
-    <a
-      href="mailto:jakubbryska2@gmail.com"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Profil mailowy"
-    >
+      }@case('mail'){
       <app-mail-icon [size]="24" />
-    </a>
-    <a
-      href="https://x.com/kubussbr"
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Profil twitter"
-    >
+      }@case('x'){
       <app-twitter-icon [size]="24" />
+      } }
     </a>
+    }
   </div>
 </footer>

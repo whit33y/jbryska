@@ -37,4 +37,19 @@ export class Header {
       this.closeMenu();
     }
   }
+
+  headerLinks = [
+    {
+      link: '/home',
+      name: 'O mnie',
+    },
+    {
+      link: '/projects',
+      name: 'Projekty',
+    },
+    {
+      link: '/contact',
+      name: 'Kontakt',
+    },
+  ];
 }

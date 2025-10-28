@@ -3,8 +3,13 @@
     <div class="logo-container">
       <button class="logo" routerLink="/home" (click)="closeMenu()">JBRYSKA</button>
 
-      <button class="theme-switch" [class.light]="theme() === 'light'" [class.dark]="theme() === 'dark'"
-        (click)="changeTheme()" aria-label="Zmień motyw">
+      <button
+        class="theme-switch"
+        [class.light]="theme() === 'light'"
+        [class.dark]="theme() === 'dark'"
+        (click)="changeTheme()"
+        aria-label="Zmień motyw"
+      >
         <div class="theme-thumb">
           @if(theme() !== 'dark'){
           <app-sun-icon />
@@ -22,12 +27,15 @@
     </button>
 
     <nav class="nav" [class.open]="menuOpen">
-      <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-        (click)="closeMenu()">O mnie</a>
-      <a routerLink="/projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-        (click)="closeMenu()">Projekty</a>
-      <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-        (click)="closeMenu()">Kontakt</a>
+      @for(link of headerLinks; track link.name){
+      <a
+        [routerLink]="link.link"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+        >{{link.name}}</a
+      >
+      }
     </nav>
   </div>
 </header>

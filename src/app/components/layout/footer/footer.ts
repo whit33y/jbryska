@@ -32,4 +32,27 @@ export class Footer {
   onMouseLeave() {
     this.transformStyle = 'scale(1) translate(0, 0)';
   }
+
+  footerLinks = [
+    {
+      name: 'github',
+      link: 'https://github.com/whit33y',
+      ariaLabel: 'Profil Github',
+    },
+    {
+      name: 'linkedin',
+      link: 'https://www.linkedin.com/in/jakub-bryska',
+      ariaLabel: 'Profil Linkedin',
+    },
+    {
+      name: 'mail',
+      link: 'mailto:jakubbryska2@gmail.com',
+      ariaLabel: 'Profil mailowy',
+    },
+    {
+      name: 'x',
+      link: 'https://x.com/kubussbr',
+      ariaLabel: 'Profil X (Twitter)',
+    },
+  ];
 }
